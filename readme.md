@@ -15,6 +15,7 @@ expect(wrapper.state().foo).toBe(bar);
 // or
 expect(wrapper.state('foo').toBe(bar);
 ```
+
 **Set component state:**
 
 ```javascript
@@ -50,4 +51,13 @@ const wrapper = shallow(<MyComponent />);
 const element = wrapper.find(Element);
 
 expect(element.at(3).text()).toBe('My Text');
+```
+
+**Check if element has className:**
+
+```javascript
+const wrapper = shallow(<MyComponent />);
+const button = wrapper.find(Button).first();
+
+expect(button.hasClass('btn')).toBe(true);
 ```
