@@ -61,3 +61,12 @@ const button = wrapper.find(Button).first();
 
 expect(button.hasClass('btn')).toBe(true);
 ```
+
+**Find element with object properties:**
+
+```javascript
+const wrapper = shallow(<MyComponent />);
+const img = wrapper.find({src: '/image.png'});
+
+expect(img.length).toBe(1);
+```
