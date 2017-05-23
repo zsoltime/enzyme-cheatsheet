@@ -70,3 +70,12 @@ const img = wrapper.find({src: '/image.png'});
 
 expect(img.length).toBe(1);
 ```
+
+**Setting input field to test form submit:**
+
+```javascript
+wrapper.find('#my-input').node.value = 'abc';
+form.simulate('submit');
+
+expect(spy).toHaveBeenCalledWith('abc');
+```
